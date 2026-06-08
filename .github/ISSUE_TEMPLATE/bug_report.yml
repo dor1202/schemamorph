@@ -1,0 +1,23 @@
+name: Bug report
+description: Something broken in SchemaMorph
+labels: [bug]
+body:
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: 1. Spawn a database node…
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser + version
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: .schemamorph file (optional)
+      description: Paste the file contents if the bug involves a specific diagram
+      render: json

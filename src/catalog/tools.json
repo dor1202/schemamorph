@@ -1,0 +1,1142 @@
+{
+  "mysql": {
+    "archetype": "database",
+    "label": "MySQL",
+    "iconSlug": "mysql",
+    "brandColor": "#4479A1"
+  },
+  "postgresql": {
+    "archetype": "database",
+    "label": "PostgreSQL",
+    "iconSlug": "postgresql",
+    "brandColor": "#4169E1"
+  },
+  "mongodb": {
+    "archetype": "database",
+    "label": "MongoDB",
+    "iconSlug": "mongodb",
+    "brandColor": "#47A248"
+  },
+  "mariadb": {
+    "archetype": "database",
+    "label": "MariaDB",
+    "iconSlug": "mariadb",
+    "brandColor": "#003545"
+  },
+  "sqlite": {
+    "archetype": "database",
+    "label": "SQLite",
+    "iconSlug": "sqlite",
+    "brandColor": "#003B57"
+  },
+  "cassandra": {
+    "archetype": "database",
+    "label": "Apache Cassandra",
+    "iconSlug": "apachecassandra",
+    "brandColor": "#1287B1"
+  },
+  "dynamodb": {
+    "archetype": "database",
+    "label": "DynamoDB",
+    "brandColor": "#4053D6",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "cockroachdb": {
+    "archetype": "database",
+    "label": "CockroachDB",
+    "iconSlug": "cockroachlabs",
+    "brandColor": "#6933FF"
+  },
+  "neo4j": {
+    "archetype": "database",
+    "label": "Neo4j",
+    "iconSlug": "neo4j",
+    "brandColor": "#4581C3"
+  },
+  "influxdb": {
+    "archetype": "database",
+    "label": "InfluxDB",
+    "iconSlug": "influxdb",
+    "brandColor": "#22ADF6"
+  },
+  "supabase": {
+    "archetype": "database",
+    "label": "Supabase",
+    "iconSlug": "supabase",
+    "brandColor": "#3ECF8E"
+  },
+  "rds": {
+    "archetype": "database",
+    "label": "AWS RDS",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "aurora": {
+    "archetype": "database",
+    "label": "AWS Aurora",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "cloudsql": {
+    "archetype": "database",
+    "label": "Cloud SQL",
+    "brandColor": "#4285F4",
+    "svgPath": "M12 2l8.5 5v10L12 22l-8.5-5V7L12 2zm0 2.3L5.5 8.15v7.7L12 19.7l6.5-3.85v-7.7L12 4.3zM10 11a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"
+  },
+  "bigtable": {
+    "archetype": "database",
+    "label": "BigTable",
+    "iconSlug": "googlebigtable",
+    "brandColor": "#4285F4"
+  },
+  "spanner": {
+    "archetype": "database",
+    "label": "Spanner",
+    "iconSlug": "googlecloudspanner",
+    "brandColor": "#4285F4"
+  },
+  "cosmosdb": {
+    "archetype": "database",
+    "label": "Azure Cosmos DB",
+    "brandColor": "#0078D4",
+    "svgPath": "M12 2L2 20h20L12 2zm0 3.5L18.5 18h-13L12 5.5zM11 13v-4h2v4h-2zm0 2h2v2h-2v-2z"
+  },
+  "kafka": {
+    "archetype": "queue",
+    "label": "Apache Kafka",
+    "iconSlug": "apachekafka",
+    "brandColor": "#e3e3e3"
+  },
+  "rabbitmq": {
+    "archetype": "queue",
+    "label": "RabbitMQ",
+    "iconSlug": "rabbitmq",
+    "brandColor": "#FF6600"
+  },
+  "sqs": {
+    "archetype": "queue",
+    "label": "AWS SQS",
+    "brandColor": "#FF4F8B",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "nats": {
+    "archetype": "queue",
+    "label": "NATS",
+    "iconSlug": "natsdotio",
+    "brandColor": "#27AAE1"
+  },
+  "pulsar": {
+    "archetype": "queue",
+    "label": "Apache Pulsar",
+    "iconSlug": "apachepulsar",
+    "brandColor": "#188FFF"
+  },
+  "celery": {
+    "archetype": "queue",
+    "label": "Celery",
+    "iconSlug": "celery",
+    "brandColor": "#37814A"
+  },
+  "zeromq": {
+    "archetype": "queue",
+    "label": "ZeroMQ",
+    "brandColor": "#DF0000",
+    "svgPath": "M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm1 2l-4 6h3l-1 6 4-6h-3l1-6z"
+  },
+  "pubsub": {
+    "archetype": "queue",
+    "label": "Google Pub/Sub",
+    "iconSlug": "googlepubsub",
+    "brandColor": "#4285F4"
+  },
+  "servicebus": {
+    "archetype": "queue",
+    "label": "Azure Service Bus",
+    "brandColor": "#0078D4",
+    "svgPath": "M12 2L2 20h20L12 2zm0 3.5L18.5 18h-13L12 5.5zM11 13v-4h2v4h-2zm0 2h2v2h-2v-2z"
+  },
+  "docker": {
+    "archetype": "compute",
+    "label": "Docker",
+    "iconSlug": "docker",
+    "brandColor": "#2496ED"
+  },
+  "kubernetes": {
+    "archetype": "compute",
+    "label": "Kubernetes",
+    "iconSlug": "kubernetes",
+    "brandColor": "#326CE5"
+  },
+  "gke": {
+    "archetype": "compute",
+    "label": "GKE",
+    "brandColor": "#4285F4",
+    "svgPath": "M12 2l8.5 5v10L12 22l-8.5-5V7L12 2zm0 2.3L5.5 8.15v7.7L12 19.7l6.5-3.85v-7.7L12 4.3zM10 11a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"
+  },
+  "eks": {
+    "archetype": "compute",
+    "label": "AWS EKS",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "ecs": {
+    "archetype": "compute",
+    "label": "AWS ECS",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "fargate": {
+    "archetype": "compute",
+    "label": "AWS Fargate",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "aks": {
+    "archetype": "compute",
+    "label": "Azure AKS",
+    "brandColor": "#0078D4",
+    "svgPath": "M12 2L2 20h20L12 2zm0 3.5L18.5 18h-13L12 5.5zM11 13v-4h2v4h-2zm0 2h2v2h-2v-2z"
+  },
+  "ec2": {
+    "archetype": "compute",
+    "label": "AWS EC2",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "podman": {
+    "archetype": "compute",
+    "label": "Podman",
+    "iconSlug": "podman",
+    "brandColor": "#892CA0"
+  },
+  "nomad": {
+    "archetype": "compute",
+    "label": "Nomad",
+    "iconSlug": "nomad",
+    "brandColor": "#00CA8E"
+  },
+  "cloudrun": {
+    "archetype": "compute",
+    "label": "Cloud Run",
+    "brandColor": "#4285F4",
+    "svgPath": "M3 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4zm2 1v14h14V5H5zm4.5 3l6 4-6 4V8z"
+  },
+  "service": {
+    "archetype": "compute",
+    "label": "Service",
+    "brandColor": "#86efac",
+    "svgPath": "M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm0 2a6 6 0 1 0 0 12A6 6 0 0 0 12 6zm0 2a4 4 0 1 1 0 8A4 4 0 0 1 12 8z"
+  },
+  "worker": {
+    "archetype": "compute",
+    "label": "Worker",
+    "brandColor": "#86efac",
+    "svgPath": "M12 2a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 2 2 2 2 0 0 1-2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2 2 2 2 0 0 1-2-2H8a2 2 0 0 1-2-2v-2a2 2 0 0 1-2-2 2 2 0 0 1 2-2V8a2 2 0 0 1 2-2h2a2 2 0 0 1 2-2zm0 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+  },
+  "redis": {
+    "archetype": "cache",
+    "label": "Redis",
+    "iconSlug": "redis",
+    "brandColor": "#FF4438"
+  },
+  "memcached": {
+    "archetype": "cache",
+    "label": "Memcached",
+    "brandColor": "#5a9e3f",
+    "svgPath": "M6 5c0-1.1 2.686-2 6-2s6 .9 6 2v14c0 1.1-2.686 2-6 2s-6-.9-6-2V5zm2 0c0 .55 1.79 1 4 1s4-.45 4-1-1.79-1-4-1-4 .45-4 1zm0 3.8c.9.45 2.42.7 4 .7s3.1-.25 4-.7V8c-.9.45-2.42.7-4 .7S8.9 8.45 8 8v.8zm0 4c.9.45 2.42.7 4 .7s3.1-.25 4-.7V12c-.9.45-2.42.7-4 .7s-3.1-.25-4-.7v.8z"
+  },
+  "varnish": {
+    "archetype": "cache",
+    "label": "Varnish",
+    "brandColor": "#4591C4",
+    "svgPath": "M2 4h3l7 10 7-10h3L12 20 2 4zm3 12h14v2H5v-2z"
+  },
+  "etcd": {
+    "archetype": "cache",
+    "label": "etcd",
+    "iconSlug": "etcd",
+    "brandColor": "#419EDA"
+  },
+  "nginx": {
+    "archetype": "gateway",
+    "label": "NGINX",
+    "iconSlug": "nginx",
+    "brandColor": "#009639"
+  },
+  "alb": {
+    "archetype": "gateway",
+    "label": "AWS ALB",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "kong": {
+    "archetype": "gateway",
+    "label": "Kong",
+    "iconSlug": "kong",
+    "brandColor": "#003459"
+  },
+  "traefik": {
+    "archetype": "gateway",
+    "label": "Traefik",
+    "iconSlug": "traefikproxy",
+    "brandColor": "#24A1C1"
+  },
+  "envoy": {
+    "archetype": "gateway",
+    "label": "Envoy",
+    "iconSlug": "envoyproxy",
+    "brandColor": "#AC6199"
+  },
+  "haproxy": {
+    "archetype": "gateway",
+    "label": "HAProxy",
+    "brandColor": "#106DA9",
+    "svgPath": "M12 2L4 6v5c0 5 3.5 9.74 8 11 4.5-1.26 8-6 8-11V6l-8-4zm0 2.36L18 8v3c0 3.9-2.6 7.48-6 8.76C8.6 18.48 6 14.9 6 11V8l6-3.64zm-4 5.14v2h3v5h2v-5h3v-2H8z"
+  },
+  "caddy": {
+    "archetype": "gateway",
+    "label": "Caddy",
+    "iconSlug": "caddy",
+    "brandColor": "#1F88C0"
+  },
+  "istio": {
+    "archetype": "gateway",
+    "label": "Istio",
+    "iconSlug": "istio",
+    "brandColor": "#466BB0"
+  },
+  "prometheus": {
+    "archetype": "observability",
+    "label": "Prometheus",
+    "iconSlug": "prometheus",
+    "brandColor": "#E6522C"
+  },
+  "grafana": {
+    "archetype": "observability",
+    "label": "Grafana",
+    "iconSlug": "grafana",
+    "brandColor": "#F46800"
+  },
+  "datadog": {
+    "archetype": "observability",
+    "label": "Datadog",
+    "iconSlug": "datadog",
+    "brandColor": "#632CA6"
+  },
+  "jaeger": {
+    "archetype": "observability",
+    "label": "Jaeger",
+    "iconSlug": "jaeger",
+    "brandColor": "#67CFE3"
+  },
+  "sentry": {
+    "archetype": "observability",
+    "label": "Sentry",
+    "iconSlug": "sentry",
+    "brandColor": "#362D59"
+  },
+  "kibana": {
+    "archetype": "observability",
+    "label": "Kibana",
+    "iconSlug": "kibana",
+    "brandColor": "#005571"
+  },
+  "newrelic": {
+    "archetype": "observability",
+    "label": "New Relic",
+    "iconSlug": "newrelic",
+    "brandColor": "#1CE783"
+  },
+  "splunk": {
+    "archetype": "observability",
+    "label": "Splunk",
+    "iconSlug": "splunk",
+    "brandColor": "#000000"
+  },
+  "opentelemetry": {
+    "archetype": "observability",
+    "label": "OpenTelemetry",
+    "iconSlug": "opentelemetry",
+    "brandColor": "#F5A800"
+  },
+  "zipkin": {
+    "archetype": "observability",
+    "label": "Zipkin",
+    "brandColor": "#FE7139",
+    "svgPath": "M10 2a8 8 0 1 0 4.906 14.32l4.387 4.387 1.414-1.414-4.387-4.387A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12A6 6 0 0 1 10 4zm-3 3v2h2V7H7zm4 0v2h2V7h-2zm-5 4v2h2v-2H6zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"
+  },
+  "s3": {
+    "archetype": "storage",
+    "label": "AWS S3",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "minio": {
+    "archetype": "storage",
+    "label": "MinIO",
+    "iconSlug": "minio",
+    "brandColor": "#C72E49"
+  },
+  "gcs": {
+    "archetype": "storage",
+    "label": "Google Cloud Storage",
+    "iconSlug": "googlecloudstorage",
+    "brandColor": "#AECBFA"
+  },
+  "backblaze": {
+    "archetype": "storage",
+    "label": "Backblaze B2",
+    "iconSlug": "backblaze",
+    "brandColor": "#EF0027"
+  },
+  "ceph": {
+    "archetype": "storage",
+    "label": "Ceph",
+    "iconSlug": "ceph",
+    "brandColor": "#EF5C55"
+  },
+  "r2": {
+    "archetype": "storage",
+    "label": "Cloudflare R2",
+    "iconSlug": "cloudflare",
+    "brandColor": "#F38020"
+  },
+  "azureblob": {
+    "archetype": "storage",
+    "label": "Azure Blob Storage",
+    "brandColor": "#0078D4",
+    "svgPath": "M12 2L2 20h20L12 2zm0 3.5L18.5 18h-13L12 5.5zM11 13v-4h2v4h-2zm0 2h2v2h-2v-2z"
+  },
+  "elasticsearch": {
+    "archetype": "search",
+    "label": "Elasticsearch",
+    "iconSlug": "elasticsearch",
+    "brandColor": "#005571"
+  },
+  "qdrant": {
+    "archetype": "search",
+    "label": "Qdrant",
+    "iconSlug": "qdrant",
+    "brandColor": "#DC244C"
+  },
+  "milvus": {
+    "archetype": "search",
+    "label": "Milvus",
+    "iconSlug": "milvus",
+    "brandColor": "#00A1EA"
+  },
+  "opensearch": {
+    "archetype": "search",
+    "label": "OpenSearch",
+    "iconSlug": "opensearch",
+    "brandColor": "#005EB8"
+  },
+  "algolia": {
+    "archetype": "search",
+    "label": "Algolia",
+    "iconSlug": "algolia",
+    "brandColor": "#003DFF"
+  },
+  "meilisearch": {
+    "archetype": "search",
+    "label": "Meilisearch",
+    "iconSlug": "meilisearch",
+    "brandColor": "#FF5CAA"
+  },
+  "typesense": {
+    "archetype": "search",
+    "label": "Typesense",
+    "brandColor": "#E1478C",
+    "svgPath": "M10 2a8 8 0 1 0 4.906 14.32l4.387 4.387 1.414-1.414-4.387-4.387A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12A6 6 0 0 1 10 4zm-3 3v2h2.5v5h2V9H14V7H7z"
+  },
+  "solr": {
+    "archetype": "search",
+    "label": "Apache Solr",
+    "iconSlug": "apachesolr",
+    "brandColor": "#D9411E"
+  },
+  "pinecone": {
+    "archetype": "search",
+    "label": "Pinecone",
+    "brandColor": "#201D1E",
+    "svgPath": "M12 2l3 2.6-3 2.6-3-2.6L12 2zM7.6 6.8L12 10.4l4.4-3.6 2.3 2L12 14.6 5.3 8.8l2.3-2zM4.6 11.6L12 17.8l7.4-6.2 1.6 2.4L12 22l-9-8 1.6-2.4z"
+  },
+  "weaviate": {
+    "archetype": "search",
+    "label": "Weaviate",
+    "brandColor": "#45D69F",
+    "svgPath": "M12 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM6 13a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm12 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM10.4 8.9l-2.6 3.4-1.6-1.2 2.6-3.4 1.6 1.2zm3.2 0l1.6-1.2 2.6 3.4-1.6 1.2-2.6-3.4z"
+  },
+  "chroma": {
+    "archetype": "search",
+    "label": "Chroma",
+    "brandColor": "#FFDE2D",
+    "svgPath": "M8 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm8 0a6 6 0 0 1 0 12V6z"
+  },
+  "lancedb": {
+    "archetype": "search",
+    "label": "LanceDB",
+    "brandColor": "#E6452F",
+    "svgPath": "M21 3l-8.5 2.1 2.6 2.6L7 15.8l-2.4-.6L3 18.4l2.6.6.6 2.6 3.2-1.6-.6-2.4 8.1-8.1 2.6 2.6L21 3z"
+  },
+  "pgvector": {
+    "archetype": "search",
+    "label": "pgvector",
+    "brandColor": "#336791",
+    "svgPath": "M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3v12c0 1.7-3.6 3-8 3s-8-1.3-8-3V6zm2 .8V18c.9.8 3 1.5 6 1.5s5.1-.7 6-1.5V6.8C16.7 7.6 14.5 8 12 8s-4.7-.4-6-1.2zM8 11.7h5.2l-1.6-1.6 1.4-1.4 4 4-4 4-1.4-1.4 1.6-1.6H8v-2z"
+  },
+  "vespa": {
+    "archetype": "search",
+    "label": "Vespa",
+    "brandColor": "#FF9100",
+    "svgPath": "M3 4h5.2L12 9.8 15.8 4H21l-9 13.5L3 4zm9 16.5l-1.7-2.6h3.4L12 20.5z"
+  },
+  "cloudflare": {
+    "archetype": "cdn",
+    "label": "Cloudflare",
+    "iconSlug": "cloudflare",
+    "brandColor": "#F38020"
+  },
+  "fastly": {
+    "archetype": "cdn",
+    "label": "Fastly",
+    "iconSlug": "fastly",
+    "brandColor": "#FF282D"
+  },
+  "cloudfront": {
+    "archetype": "cdn",
+    "label": "AWS CloudFront",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "akamai": {
+    "archetype": "cdn",
+    "label": "Akamai",
+    "iconSlug": "akamai",
+    "brandColor": "#009BDE"
+  },
+  "web-client": {
+    "archetype": "client",
+    "label": "Web Browser",
+    "brandColor": "#d9f99d",
+    "svgPath": "M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2c.55 0 1.42.56 2.25 2.11.44.81.8 1.81 1.05 2.89H8.7c.25-1.08.61-2.08 1.05-2.89C10.58 4.56 11.45 4 12 4zm-2.6.44C8.67 5.7 7.88 7.5 7.38 9.5H4.26A8.04 8.04 0 0 1 9.4 4.44zM14.6 4.44A8.04 8.04 0 0 1 19.74 9.5h-3.12c-.5-2-.29-3.8-2.02-5.06zM4 11.5h3.07c-.05.49-.07.99-.07 1.5s.02 1.01.07 1.5H4a8.04 8.04 0 0 1 0-3zm5.07 0h5.86c.05.49.07.99.07 1.5s-.02 1.01-.07 1.5H9.07A13.2 13.2 0 0 1 9 13c0-.51.02-1.01.07-1.5zM17.93 11.5H21a8.04 8.04 0 0 1 0 3h-3.07c.05-.49.07-.99.07-1.5s-.02-1.01-.07-1.5zM4.26 16.5h3.12c.5 2 1.29 3.8 2.02 5.06A8.04 8.04 0 0 1 4.26 16.5zm5.14 0h5.2c-.25 1.08-.61 2.08-1.05 2.89C12.72 20.94 12.27 21 12 21s-.72-.06-1.55-1.11c-.44-.81-.8-1.81-1.05-2.89zm7.22 0h3.12a8.04 8.04 0 0 1-5.14 5.06c.73-1.26 1.52-3.06 2.02-5.06z"
+  },
+  "mobile-client": {
+    "archetype": "client",
+    "label": "Mobile App",
+    "brandColor": "#d9f99d",
+    "svgPath": "M7 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7zm0 2h10v16H7V4zm4 14a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"
+  },
+  "desktop-client": {
+    "archetype": "client",
+    "label": "Desktop App",
+    "brandColor": "#d9f99d",
+    "svgPath": "M2 3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8v2H8a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2h-2v-2h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2zm1 2h18v10H3V5z"
+  },
+  "cli-client": {
+    "archetype": "client",
+    "label": "CLI",
+    "brandColor": "#d9f99d",
+    "svgPath": "M2 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2zm1 2h18v14H3V5zm3 3l-1 1 3 3-3 3 1 1 4-4-4-4zm5 7a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-4z"
+  },
+  "iot-client": {
+    "archetype": "client",
+    "label": "IoT Device",
+    "brandColor": "#d9f99d",
+    "svgPath": "M7 2a1 1 0 0 0 0 2H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h2a1 1 0 0 0 0 2H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h2zm10 0h2a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3h-2a1 1 0 0 0 0-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2a1 1 0 0 0 0-2zM8 6a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H8zm1 2h6v8H9V8zm1 2v4h4v-4h-4z"
+  },
+  "auth0": {
+    "archetype": "auth",
+    "label": "Auth0",
+    "iconSlug": "auth0",
+    "brandColor": "#EB5424"
+  },
+  "keycloak": {
+    "archetype": "auth",
+    "label": "Keycloak",
+    "iconSlug": "keycloak",
+    "brandColor": "#4D9FDC"
+  },
+  "okta": {
+    "archetype": "auth",
+    "label": "Okta",
+    "iconSlug": "okta",
+    "brandColor": "#007DC1"
+  },
+  "clerk": {
+    "archetype": "auth",
+    "label": "Clerk",
+    "iconSlug": "clerk",
+    "brandColor": "#6C47FF"
+  },
+  "firebase-auth": {
+    "archetype": "auth",
+    "label": "Firebase Auth",
+    "iconSlug": "firebase",
+    "brandColor": "#DD2C00"
+  },
+  "openai": {
+    "archetype": "ml",
+    "label": "OpenAI",
+    "brandColor": "#412991",
+    "svgPath": "M12 2a1.5 1.5 0 0 1 1.5 1.5v.75A5 5 0 0 1 17 9h.75a1.5 1.5 0 0 1 0 3H17a5 5 0 0 1-3.5 4.75v.75a1.5 1.5 0 0 1-3 0v-.75A5 5 0 0 1 7 12h-.75a1.5 1.5 0 0 1 0-3H7A5 5 0 0 1 10.5 4.25V3.5A1.5 1.5 0 0 1 12 2zm0 5a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+  },
+  "huggingface": {
+    "archetype": "ml",
+    "label": "Hugging Face",
+    "iconSlug": "huggingface",
+    "brandColor": "#FFD21E"
+  },
+  "pytorch": {
+    "archetype": "ml",
+    "label": "PyTorch",
+    "iconSlug": "pytorch",
+    "brandColor": "#EE4C2C"
+  },
+  "tensorflow": {
+    "archetype": "ml",
+    "label": "TensorFlow",
+    "iconSlug": "tensorflow",
+    "brandColor": "#FF6F00"
+  },
+  "ollama": {
+    "archetype": "ml",
+    "label": "Ollama",
+    "iconSlug": "ollama",
+    "brandColor": "#e3e3e3"
+  },
+  "anthropic": {
+    "archetype": "ml",
+    "label": "Anthropic",
+    "iconSlug": "anthropic",
+    "brandColor": "#D4C5A9"
+  },
+  "snowflake": {
+    "archetype": "warehouse",
+    "label": "Snowflake",
+    "iconSlug": "snowflake",
+    "brandColor": "#29B5E8"
+  },
+  "clickhouse": {
+    "archetype": "warehouse",
+    "label": "ClickHouse",
+    "iconSlug": "clickhouse",
+    "brandColor": "#FBCD37"
+  },
+  "bigquery": {
+    "archetype": "warehouse",
+    "label": "Google BigQuery",
+    "iconSlug": "googlebigquery",
+    "brandColor": "#4285F4"
+  },
+  "databricks": {
+    "archetype": "warehouse",
+    "label": "Databricks",
+    "iconSlug": "databricks",
+    "brandColor": "#FF3621"
+  },
+  "duckdb": {
+    "archetype": "warehouse",
+    "label": "DuckDB",
+    "iconSlug": "duckdb",
+    "brandColor": "#FFF000"
+  },
+  "redshift": {
+    "archetype": "warehouse",
+    "label": "AWS Redshift",
+    "brandColor": "#8C4FFF",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "synapse": {
+    "archetype": "warehouse",
+    "label": "Azure Synapse",
+    "brandColor": "#0078D4",
+    "svgPath": "M12 2L2 20h20L12 2zm0 3.5L18.5 18h-13L12 5.5zM11 13v-4h2v4h-2zm0 2h2v2h-2v-2z"
+  },
+  "spark": {
+    "archetype": "pipeline",
+    "label": "Apache Spark",
+    "iconSlug": "apachespark",
+    "brandColor": "#E25A1C"
+  },
+  "flink": {
+    "archetype": "pipeline",
+    "label": "Apache Flink",
+    "iconSlug": "apacheflink",
+    "brandColor": "#E6526F"
+  },
+  "airflow": {
+    "archetype": "pipeline",
+    "label": "Apache Airflow",
+    "iconSlug": "apacheairflow",
+    "brandColor": "#017CEE"
+  },
+  "dbt": {
+    "archetype": "pipeline",
+    "label": "dbt",
+    "brandColor": "#FF694A",
+    "svgPath": "M5 4h5a7 7 0 0 1 0 14H5V4zm3 2.5v9H10a4.5 4.5 0 0 0 0-9H8zm6 2v2h2v-2h-2zm1 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+  },
+  "githubactions": {
+    "archetype": "cicd",
+    "label": "GitHub Actions",
+    "iconSlug": "githubactions",
+    "brandColor": "#2088FF"
+  },
+  "gitlab": {
+    "archetype": "cicd",
+    "label": "GitLab CI",
+    "iconSlug": "gitlab",
+    "brandColor": "#FC6D26"
+  },
+  "jenkins": {
+    "archetype": "cicd",
+    "label": "Jenkins",
+    "iconSlug": "jenkins",
+    "brandColor": "#D24939"
+  },
+  "argocd": {
+    "archetype": "cicd",
+    "label": "Argo CD",
+    "iconSlug": "argo",
+    "brandColor": "#EF7B4D"
+  },
+  "circleci": {
+    "archetype": "cicd",
+    "label": "CircleCI",
+    "iconSlug": "circleci",
+    "brandColor": "#343434"
+  },
+  "terraform": {
+    "archetype": "iac",
+    "label": "Terraform",
+    "iconSlug": "terraform",
+    "brandColor": "#844FBA"
+  },
+  "ansible": {
+    "archetype": "iac",
+    "label": "Ansible",
+    "iconSlug": "ansible",
+    "brandColor": "#EE0000"
+  },
+  "pulumi": {
+    "archetype": "iac",
+    "label": "Pulumi",
+    "iconSlug": "pulumi",
+    "brandColor": "#8A3391"
+  },
+  "helm": {
+    "archetype": "iac",
+    "label": "Helm",
+    "iconSlug": "helm",
+    "brandColor": "#0F1689"
+  },
+  "lambda": {
+    "archetype": "serverless",
+    "label": "AWS Lambda",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "cloudflareworkers": {
+    "archetype": "serverless",
+    "label": "Cloudflare Workers",
+    "iconSlug": "cloudflareworkers",
+    "brandColor": "#F6821F"
+  },
+  "vercel": {
+    "archetype": "serverless",
+    "label": "Vercel",
+    "iconSlug": "vercel",
+    "brandColor": "#e3e3e3"
+  },
+  "netlify": {
+    "archetype": "serverless",
+    "label": "Netlify",
+    "iconSlug": "netlify",
+    "brandColor": "#00C7B7"
+  },
+  "vault": {
+    "archetype": "secrets",
+    "label": "HashiCorp Vault",
+    "iconSlug": "vault",
+    "brandColor": "#FFEC6E"
+  },
+  "doppler": {
+    "archetype": "secrets",
+    "label": "Doppler",
+    "brandColor": "#3F00B5",
+    "svgPath": "M5 4h5a8 8 0 0 1 0 16H5V4zm3 2.5v11H10a5.5 5.5 0 0 0 0-11H8zm6.5 3.5a.75.75 0 0 1 .75.75v1.5l1.2-.69a.75.75 0 0 1 .75 1.3l-1.2.69 1.2.69a.75.75 0 0 1-.75 1.3l-1.2-.69v1.41a.75.75 0 0 1-1.5 0V15.1l-1.2.69a.75.75 0 0 1-.75-1.3l1.2-.69-1.2-.69a.75.75 0 0 1 .75-1.3l1.2.69V11a.75.75 0 0 1 .75-.75z"
+  },
+  "awssecretsmanager": {
+    "archetype": "secrets",
+    "label": "AWS Secrets Manager",
+    "brandColor": "#DD344C",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "stripe": {
+    "archetype": "external",
+    "label": "Stripe",
+    "iconSlug": "stripe",
+    "brandColor": "#008CDD"
+  },
+  "twilio": {
+    "archetype": "external",
+    "label": "Twilio",
+    "brandColor": "#F22F46",
+    "svgPath": "M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm-2 5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-4z"
+  },
+  "sendgrid": {
+    "archetype": "external",
+    "label": "SendGrid",
+    "brandColor": "#1A82E2",
+    "svgPath": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"
+  },
+  "slack": {
+    "archetype": "external",
+    "label": "Slack",
+    "brandColor": "#4A154B",
+    "svgPath": "M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"
+  },
+  "googlemaps": {
+    "archetype": "external",
+    "label": "Google Maps",
+    "iconSlug": "googlemaps",
+    "brandColor": "#4285F4"
+  },
+  "paypal": {
+    "archetype": "external",
+    "label": "PayPal",
+    "iconSlug": "paypal",
+    "brandColor": "#003087"
+  },
+  "fcm": {
+    "archetype": "notification",
+    "label": "FCM",
+    "iconSlug": "firebase",
+    "brandColor": "#DD2C00"
+  },
+  "apns": {
+    "archetype": "notification",
+    "label": "APNS",
+    "iconSlug": "apple",
+    "brandColor": "#555555"
+  },
+  "sns": {
+    "archetype": "notification",
+    "label": "AWS SNS",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "onesignal": {
+    "archetype": "notification",
+    "label": "OneSignal",
+    "brandColor": "#E54B4D",
+    "svgPath": "M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm0 3a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 1a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+  },
+  "ses": {
+    "archetype": "notification",
+    "label": "AWS SES",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "pusher": {
+    "archetype": "realtime",
+    "label": "Pusher",
+    "iconSlug": "pusher",
+    "brandColor": "#300D4F"
+  },
+  "ably": {
+    "archetype": "realtime",
+    "label": "Ably",
+    "brandColor": "#FF5416",
+    "svgPath": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 13H9V9h2v6zm4 0h-2V9h2v6z"
+  },
+  "socketio": {
+    "archetype": "realtime",
+    "label": "Socket.IO",
+    "iconSlug": "socketdotio",
+    "brandColor": "#010101"
+  },
+  "centrifugo": {
+    "archetype": "realtime",
+    "label": "Centrifugo",
+    "brandColor": "#FF5733",
+    "svgPath": "M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm0 2a6 6 0 1 0 0 12A6 6 0 0 0 12 6zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+  },
+  "temporal": {
+    "archetype": "workflow",
+    "label": "Temporal",
+    "iconSlug": "temporal",
+    "brandColor": "#141414"
+  },
+  "cron": {
+    "archetype": "workflow",
+    "label": "Cron",
+    "brandColor": "#555555",
+    "svgPath": "M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm0 2v6l4 2.5-1 1.7L11 15V8h2z"
+  },
+  "n8n": {
+    "archetype": "workflow",
+    "label": "n8n",
+    "iconSlug": "n8n",
+    "brandColor": "#EA4B71"
+  },
+  "zapier": {
+    "archetype": "workflow",
+    "label": "Zapier",
+    "iconSlug": "zapier",
+    "brandColor": "#FF4A00"
+  },
+  "route53": {
+    "archetype": "cdn",
+    "label": "AWS Route 53",
+    "brandColor": "#FF9900",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "clouddns": {
+    "archetype": "cdn",
+    "label": "Cloud DNS",
+    "brandColor": "#4285F4",
+    "svgPath": "M12 2l8.5 5v10L12 22l-8.5-5V7L12 2zm0 2.3L5.5 8.15v7.7L12 19.7l6.5-3.85v-7.7L12 4.3zM10 11a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"
+  },
+  "scylladb": {
+    "archetype": "database",
+    "label": "ScyllaDB",
+    "iconSlug": "scylladb",
+    "brandColor": "#6CD5C8"
+  },
+  "couchbase": {
+    "archetype": "database",
+    "label": "Couchbase",
+    "iconSlug": "couchbase",
+    "brandColor": "#EA2328"
+  },
+  "oracle": {
+    "archetype": "database",
+    "label": "Oracle DB",
+    "brandColor": "#F80000",
+    "svgPath": "M6 9a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v6a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6V9zm2 0v6a4 4 0 0 0 4 4h0a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4h0a4 4 0 0 0-4 4z"
+  },
+  "sqlserver": {
+    "archetype": "database",
+    "label": "SQL Server",
+    "brandColor": "#CC2927",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zM8 8h2v3H8V8zm3 0h2v3h-2V8zm3 0h2v3h-2V8zm-6.5 7.5C9 16.5 10.8 17 12 17s3-.5 4.5-1.5l1 1C16 18 13.5 19 12 19s-4-.5-5.5-1.5l1-1z"
+  },
+  "firestore": {
+    "archetype": "database",
+    "label": "Firestore",
+    "iconSlug": "firebase",
+    "brandColor": "#FFCA28"
+  },
+  "timescaledb": {
+    "archetype": "database",
+    "label": "TimescaleDB",
+    "iconSlug": "timescale",
+    "brandColor": "#FDB515"
+  },
+  "questdb": {
+    "archetype": "database",
+    "label": "QuestDB",
+    "brandColor": "#CD4AC7",
+    "svgPath": "M10 2a8 8 0 1 0 4.906 14.32l4.387 4.387 1.414-1.414-4.387-4.387A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12A6 6 0 0 1 10 4zm-1 3v5.5l4 2-1 1.7-4.5-2.7V9h1.5z"
+  },
+  "arangodb": {
+    "archetype": "database",
+    "label": "ArangoDB",
+    "iconSlug": "arangodb",
+    "brandColor": "#4AA84C"
+  },
+  "trino": {
+    "archetype": "warehouse",
+    "label": "Trino",
+    "iconSlug": "trino",
+    "brandColor": "#DD00A1"
+  },
+  "apachedruid": {
+    "archetype": "warehouse",
+    "label": "Apache Druid",
+    "iconSlug": "apachedruid",
+    "brandColor": "#29A2C1"
+  },
+  "apachepinot": {
+    "archetype": "warehouse",
+    "label": "Apache Pinot",
+    "brandColor": "#1BA8B6",
+    "svgPath": "M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z"
+  },
+  "awskinesis": {
+    "archetype": "queue",
+    "label": "AWS Kinesis",
+    "brandColor": "#FF4F8B",
+    "svgPath": "M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm2 1v7h12V6H6zm1.5 10.5C9 17.5 10.8 18 12 18s3-.5 4.5-1.5l1 1C16 18.9 14.1 19.5 12 19.5s-4-.6-5.5-1.5l1-1z"
+  },
+  "redpanda": {
+    "archetype": "queue",
+    "label": "Redpanda",
+    "brandColor": "#E6356F",
+    "svgPath": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"
+  },
+  "dynatrace": {
+    "archetype": "observability",
+    "label": "Dynatrace",
+    "iconSlug": "dynatrace",
+    "brandColor": "#1496FF"
+  },
+  "pagerduty": {
+    "archetype": "observability",
+    "label": "PagerDuty",
+    "iconSlug": "pagerduty",
+    "brandColor": "#06AC38"
+  },
+  "victoriametrics": {
+    "archetype": "observability",
+    "label": "VictoriaMetrics",
+    "iconSlug": "victoriametrics",
+    "brandColor": "#621773"
+  },
+  "fluentd": {
+    "archetype": "observability",
+    "label": "Fluentd",
+    "iconSlug": "fluentd",
+    "brandColor": "#0E83C8"
+  },
+  "fluentbit": {
+    "archetype": "observability",
+    "label": "Fluent Bit",
+    "iconSlug": "fluentbit",
+    "brandColor": "#49BDA5"
+  },
+  "digitalocean": {
+    "archetype": "compute",
+    "label": "DigitalOcean",
+    "iconSlug": "digitalocean",
+    "brandColor": "#0080FF"
+  },
+  "railway": {
+    "archetype": "compute",
+    "label": "Railway",
+    "iconSlug": "railway",
+    "brandColor": "#9CA3AF"
+  },
+  "render": {
+    "archetype": "compute",
+    "label": "Render",
+    "iconSlug": "render",
+    "brandColor": "#94A3B8"
+  },
+  "neon": {
+    "archetype": "database",
+    "label": "Neon",
+    "iconSlug": "neon",
+    "brandColor": "#34D59A"
+  },
+  "googlegemini": {
+    "archetype": "ml",
+    "label": "Google Gemini",
+    "iconSlug": "googlegemini",
+    "brandColor": "#8E75B2"
+  },
+  "mistralai": {
+    "archetype": "ml",
+    "label": "Mistral AI",
+    "iconSlug": "mistralai",
+    "brandColor": "#FA520F"
+  },
+  "replicate": {
+    "archetype": "ml",
+    "label": "Replicate",
+    "iconSlug": "replicate",
+    "brandColor": "#A3A3A3"
+  },
+  "langchain": {
+    "archetype": "ml",
+    "label": "LangChain",
+    "iconSlug": "langchain",
+    "brandColor": "#7FC8FF"
+  },
+  "cohere": {
+    "archetype": "ml",
+    "label": "Cohere",
+    "brandColor": "#39594D",
+    "svgPath": "M12 3a9 9 0 1 1-9 9h2.5a6.5 6.5 0 1 0 6.5-6.5V3zm0 5a4 4 0 1 1-4 4h2.3A1.7 1.7 0 1 0 12 10.3V8z"
+  },
+  "togetherai": {
+    "archetype": "ml",
+    "label": "Together AI",
+    "brandColor": "#0F6FFF",
+    "svgPath": "M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm12.5 0a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"
+  },
+  "groq": {
+    "archetype": "ml",
+    "label": "Groq",
+    "brandColor": "#F55036",
+    "svgPath": "M9 2h2v2.5h2V2h2v2.5h1A2.5 2.5 0 0 1 18.5 7v1H21v2h-2.5v2H21v2h-2.5v1a2.5 2.5 0 0 1-2.5 2.5h-1V20h-2v-2.5h-2V20H9v-2.5H8A2.5 2.5 0 0 1 5.5 15v-1H3v-2h2.5v-2H3V8h2.5V7A2.5 2.5 0 0 1 8 4.5h1V2zM7.5 6.5v11h9v-11h-9zm5 1.5l-2.3 4.2h1.8l-1 3.3 3.8-4.7h-1.9L14.3 8h-1.8z"
+  },
+  "travisci": {
+    "archetype": "cicd",
+    "label": "Travis CI",
+    "iconSlug": "travisci",
+    "brandColor": "#3EAAAF"
+  },
+  "buildkite": {
+    "archetype": "cicd",
+    "label": "Buildkite",
+    "iconSlug": "buildkite",
+    "brandColor": "#14CC80"
+  },
+  "teamcity": {
+    "archetype": "cicd",
+    "label": "TeamCity",
+    "iconSlug": "teamcity",
+    "brandColor": "#22B7F2"
+  },
+  "drone": {
+    "archetype": "cicd",
+    "label": "Drone CI",
+    "iconSlug": "drone",
+    "brandColor": "#C5C9CF"
+  },
+  "ory": {
+    "archetype": "auth",
+    "label": "Ory",
+    "iconSlug": "ory",
+    "brandColor": "#4F46E5"
+  },
+  "prefect": {
+    "archetype": "pipeline",
+    "label": "Prefect",
+    "iconSlug": "prefect",
+    "brandColor": "#44CADC"
+  },
+  "airbyte": {
+    "archetype": "pipeline",
+    "label": "Airbyte",
+    "iconSlug": "airbyte",
+    "brandColor": "#615EFF"
+  },
+  "opentofu": {
+    "archetype": "iac",
+    "label": "OpenTofu",
+    "iconSlug": "opentofu",
+    "brandColor": "#FFDA18"
+  },
+  "github": {
+    "archetype": "external",
+    "label": "GitHub",
+    "iconSlug": "github",
+    "brandColor": "#E3E3E3"
+  },
+  "hubspot": {
+    "archetype": "external",
+    "label": "HubSpot",
+    "iconSlug": "hubspot",
+    "brandColor": "#FF7A59"
+  },
+  "shopify": {
+    "archetype": "external",
+    "label": "Shopify",
+    "iconSlug": "shopify",
+    "brandColor": "#7AB55C"
+  }
+}

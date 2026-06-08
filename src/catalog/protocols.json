@@ -1,0 +1,8 @@
+{
+  "HTTP": ["HTTPS", "REST", "GraphQL", "SOAP", "Webhook"],
+  "RPC": ["gRPC", "Thrift"],
+  "Realtime": ["WebSocket", "SSE"],
+  "Transport": ["TCP", "UDP"],
+  "Messaging": ["AMQP", "MQTT"],
+  "Data": ["CDC Stream", "ETL", "Batch"]
+}

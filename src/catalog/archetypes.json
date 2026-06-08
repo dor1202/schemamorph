@@ -1,0 +1,613 @@
+{
+  "database": {
+    "label": "Database",
+    "brandColor": "#7dd3fc",
+    "symbolViewBox": "0 0 64 72",
+    "symbolSvg": "<ellipse cx='32' cy='12' rx='24' ry='9' fill='none' stroke='currentColor' stroke-width='4'/><path d='M8 12 v44 a24 9 0 0 0 48 0 v-44' fill='none' stroke='currentColor' stroke-width='4'/>",
+    "defaultTool": "postgresql",
+    "attributes": [
+      {
+        "key": "replication",
+        "label": "Replication",
+        "type": "enum",
+        "options": ["none", "primary-replica", "multi-primary", "read-replicas"]
+      },
+      {
+        "key": "partitioning",
+        "label": "Partitioning",
+        "type": "enum",
+        "options": ["none", "hash", "range", "list"]
+      },
+      { "key": "shards", "label": "Shards", "type": "number" },
+      {
+        "key": "consistency",
+        "label": "Consistency",
+        "type": "enum",
+        "options": ["strong", "eventual", "causal"]
+      },
+      { "key": "backups", "label": "Backups", "type": "boolean" },
+      { "key": "engine-version", "label": "Engine Version", "type": "text" },
+      {
+        "key": "storage-size",
+        "label": "Storage Size",
+        "type": "text",
+        "suggestions": ["10GB", "100GB", "1TB", "10TB"]
+      },
+      { "key": "indexes", "label": "Indexes", "type": "text" },
+      { "key": "connection-pool", "label": "Connection Pool", "type": "number" }
+    ]
+  },
+  "queue": {
+    "label": "Queue",
+    "brandColor": "#fbbf24",
+    "symbolViewBox": "0 0 88 40",
+    "symbolSvg": "<rect x='2' y='8' width='84' height='24' fill='none' stroke='currentColor' stroke-width='4' rx='2'/><line x1='23' y1='8' x2='23' y2='32' stroke='currentColor' stroke-width='3'/><line x1='44' y1='8' x2='44' y2='32' stroke='currentColor' stroke-width='3'/><line x1='65' y1='8' x2='65' y2='32' stroke='currentColor' stroke-width='3'/>",
+    "defaultTool": "kafka",
+    "attributes": [
+      { "key": "partitions", "label": "Partitions", "type": "number" },
+      {
+        "key": "ordering",
+        "label": "Ordering",
+        "type": "enum",
+        "options": ["none", "per-partition", "global-fifo"]
+      },
+      {
+        "key": "delivery",
+        "label": "Delivery",
+        "type": "enum",
+        "options": ["at-most-once", "at-least-once", "exactly-once"]
+      },
+      { "key": "dlq", "label": "DLQ", "type": "boolean" },
+      {
+        "key": "retention",
+        "label": "Retention",
+        "type": "text",
+        "suggestions": ["1d", "7d", "30d", "infinite"]
+      },
+      {
+        "key": "throughput",
+        "label": "Throughput",
+        "type": "text",
+        "suggestions": ["1k/s", "10k/s", "100k/s"]
+      },
+      {
+        "key": "max-message-size",
+        "label": "Max Message Size",
+        "type": "text",
+        "suggestions": ["1KB", "256KB", "1MB", "10MB"]
+      }
+    ]
+  },
+  "compute": {
+    "label": "Compute",
+    "brandColor": "#86efac",
+    "symbolViewBox": "0 0 72 48",
+    "symbolSvg": "<rect x='2' y='2' width='68' height='44' fill='none' stroke='currentColor' stroke-width='4' rx='4'/><circle cx='14' cy='14' r='3' fill='currentColor'/>",
+    "defaultTool": "docker",
+    "attributes": [
+      { "key": "replicas", "label": "Replicas", "type": "number" },
+      {
+        "key": "autoscaling",
+        "label": "Autoscaling",
+        "type": "enum",
+        "options": ["none", "horizontal", "vertical"]
+      },
+      { "key": "stateless", "label": "Stateless", "type": "boolean" },
+      {
+        "key": "language",
+        "label": "Language",
+        "type": "text",
+        "suggestions": ["go", "java", "python", "node", "rust"]
+      },
+      {
+        "key": "memory",
+        "label": "Memory",
+        "type": "text",
+        "suggestions": ["512MB", "1GB", "4GB"]
+      },
+      {
+        "key": "cpu",
+        "label": "CPU",
+        "type": "text",
+        "suggestions": ["0.25 vCPU", "1 vCPU", "4 vCPU", "16 vCPU"]
+      }
+    ]
+  },
+  "cache": {
+    "label": "Cache",
+    "brandColor": "#f0abfc",
+    "symbolViewBox": "0 0 64 52",
+    "symbolSvg": "<rect x='6' y='36' width='52' height='12' fill='none' stroke='currentColor' stroke-width='3' rx='2'/><rect x='6' y='20' width='52' height='12' fill='none' stroke='currentColor' stroke-width='3' rx='2'/><rect x='6' y='4' width='52' height='12' fill='none' stroke='currentColor' stroke-width='3' rx='2'/>",
+    "defaultTool": "redis",
+    "attributes": [
+      {
+        "key": "eviction",
+        "label": "Eviction",
+        "type": "enum",
+        "options": ["lru", "lfu", "fifo", "ttl-only"]
+      },
+      {
+        "key": "ttl",
+        "label": "TTL",
+        "type": "text",
+        "suggestions": ["60s", "5m", "1h", "24h"]
+      },
+      {
+        "key": "strategy",
+        "label": "Strategy",
+        "type": "enum",
+        "options": [
+          "cache-aside",
+          "write-through",
+          "write-behind",
+          "read-through"
+        ]
+      },
+      {
+        "key": "size",
+        "label": "Size",
+        "type": "text",
+        "suggestions": ["512MB", "2GB", "8GB", "64GB"]
+      }
+    ]
+  },
+  "gateway": {
+    "label": "Gateway",
+    "brandColor": "#fda4af",
+    "symbolViewBox": "0 0 64 56",
+    "symbolSvg": "<path d='M4 28 h20 M24 28 L50 10 M24 28 L50 28 M24 28 L50 46' fill='none' stroke='currentColor' stroke-width='4'/><path d='M48 4 l12 6 -12 6z M48 22 l12 6 -12 6z M48 40 l12 6 -12 6z' fill='currentColor'/>",
+    "defaultTool": "nginx",
+    "attributes": [
+      {
+        "key": "lb-algorithm",
+        "label": "LB Algorithm",
+        "type": "enum",
+        "options": ["round-robin", "least-connections", "ip-hash", "weighted"]
+      },
+      {
+        "key": "rate-limit",
+        "label": "Rate Limit",
+        "type": "text",
+        "suggestions": ["100/s", "1k/s", "10k/s"]
+      },
+      {
+        "key": "tls-termination",
+        "label": "TLS Termination",
+        "type": "boolean"
+      },
+      { "key": "auth-offload", "label": "Auth Offload", "type": "boolean" },
+      {
+        "key": "timeout",
+        "label": "Timeout",
+        "type": "text",
+        "suggestions": ["5s", "30s", "60s", "300s"]
+      }
+    ]
+  },
+  "observability": {
+    "label": "Observability",
+    "brandColor": "#fdba74",
+    "symbolViewBox": "0 0 64 40",
+    "symbolSvg": "<path d='M2 20 h12 l6 -14 l8 28 l6 -14 h28' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'/>",
+    "defaultTool": "prometheus",
+    "attributes": [
+      {
+        "key": "signal",
+        "label": "Signal",
+        "type": "enum",
+        "options": ["metrics", "logs", "traces", "all"]
+      },
+      {
+        "key": "retention",
+        "label": "Retention",
+        "type": "text",
+        "suggestions": ["7d", "30d", "90d", "1y"]
+      },
+      {
+        "key": "sampling",
+        "label": "Sampling",
+        "type": "text",
+        "suggestions": ["1%", "10%", "100%"]
+      },
+      { "key": "alerting", "label": "Alerting", "type": "boolean" }
+    ]
+  },
+  "storage": {
+    "label": "Object Storage",
+    "brandColor": "#a5b4fc",
+    "symbolViewBox": "0 0 64 56",
+    "symbolSvg": "<path d='M8 8 h48 l-6 40 a8 6 0 0 1 -8 6 h-20 a8 6 0 0 1 -8 -6 z' fill='none' stroke='currentColor' stroke-width='4'/><line x1='8' y1='18' x2='56' y2='18' stroke='currentColor' stroke-width='3'/>",
+    "defaultTool": "minio",
+    "attributes": [
+      {
+        "key": "class",
+        "label": "Class",
+        "type": "enum",
+        "options": ["hot", "warm", "cold", "archive"]
+      },
+      { "key": "versioning", "label": "Versioning", "type": "boolean" },
+      { "key": "encryption", "label": "Encryption", "type": "boolean" },
+      { "key": "lifecycle", "label": "Lifecycle Policy", "type": "text" },
+      {
+        "key": "region-replication",
+        "label": "Region Replication",
+        "type": "enum",
+        "options": ["single-region", "multi-region"]
+      }
+    ]
+  },
+  "search": {
+    "label": "Search",
+    "brandColor": "#5eead4",
+    "symbolViewBox": "0 0 56 56",
+    "symbolSvg": "<circle cx='24' cy='24' r='16' fill='none' stroke='currentColor' stroke-width='4'/><line x1='36' y1='36' x2='52' y2='52' stroke='currentColor' stroke-width='5' stroke-linecap='round'/>",
+    "defaultTool": "elasticsearch",
+    "attributes": [
+      { "key": "replicas", "label": "Replicas", "type": "number" },
+      { "key": "index-count", "label": "Index Count", "type": "number" },
+      { "key": "analyzer", "label": "Analyzer", "type": "text" },
+      { "key": "full-text", "label": "Full-text", "type": "boolean" }
+    ]
+  },
+  "cdn": {
+    "label": "CDN",
+    "brandColor": "#93c5fd",
+    "symbolViewBox": "0 0 56 56",
+    "symbolSvg": "<circle cx='28' cy='28' r='24' fill='none' stroke='currentColor' stroke-width='3.5'/><ellipse cx='28' cy='28' rx='11' ry='24' fill='none' stroke='currentColor' stroke-width='3'/><line x1='4' y1='28' x2='52' y2='28' stroke='currentColor' stroke-width='3'/>",
+    "defaultTool": "cloudflare",
+    "attributes": [
+      { "key": "edge-locations", "label": "Edge Locations", "type": "number" },
+      { "key": "waf", "label": "WAF", "type": "boolean" },
+      { "key": "cache-policy", "label": "Cache Policy", "type": "text" },
+      { "key": "ttl", "label": "TTL", "type": "text" },
+      { "key": "invalidation", "label": "Invalidation", "type": "text" }
+    ]
+  },
+  "client": {
+    "label": "Client",
+    "brandColor": "#d9f99d",
+    "symbolViewBox": "0 0 48 56",
+    "symbolSvg": "<circle cx='24' cy='14' r='10' fill='none' stroke='currentColor' stroke-width='4'/><path d='M4 52 a20 14 0 0 1 40 0' fill='none' stroke='currentColor' stroke-width='4'/>",
+    "defaultTool": "web-client",
+    "attributes": [
+      {
+        "key": "platform",
+        "label": "Platform",
+        "type": "enum",
+        "options": ["web", "ios", "android", "desktop", "cli", "iot"]
+      },
+      { "key": "offline", "label": "Offline", "type": "boolean" },
+      {
+        "key": "framework",
+        "label": "Framework",
+        "type": "text",
+        "suggestions": ["react", "vue", "flutter", "swiftui", "kotlin"]
+      },
+      {
+        "key": "auth-method",
+        "label": "Auth Method",
+        "type": "enum",
+        "options": ["session-cookie", "jwt", "api-key", "oauth2"]
+      }
+    ]
+  },
+  "auth": {
+    "label": "Auth / Identity",
+    "brandColor": "#fcd34d",
+    "symbolViewBox": "0 0 48 56",
+    "symbolSvg": "<path d='M24 2 L44 10 v16 c0 14 -9 22 -20 26 C13 48 4 40 4 26 V10 z' fill='none' stroke='currentColor' stroke-width='4'/><circle cx='24' cy='24' r='5' fill='none' stroke='currentColor' stroke-width='3'/><line x1='24' y1='29' x2='24' y2='38' stroke='currentColor' stroke-width='3'/>",
+    "defaultTool": "keycloak",
+    "attributes": [
+      {
+        "key": "protocol",
+        "label": "Protocol",
+        "type": "enum",
+        "options": ["oauth2", "oidc", "saml", "ldap", "jwt"]
+      },
+      { "key": "mfa", "label": "MFA", "type": "boolean" },
+      {
+        "key": "sessions",
+        "label": "Sessions",
+        "type": "enum",
+        "options": ["stateless-jwt", "server-session"]
+      },
+      { "key": "sso", "label": "SSO", "type": "boolean" },
+      {
+        "key": "token-ttl",
+        "label": "Token TTL",
+        "type": "text",
+        "suggestions": ["15m", "1h", "24h", "7d"]
+      }
+    ]
+  },
+  "ml": {
+    "label": "AI / ML",
+    "brandColor": "#c4b5fd",
+    "symbolViewBox": "0 0 60 56",
+    "symbolSvg": "<circle cx='12' cy='12' r='6' fill='none' stroke='currentColor' stroke-width='4'/><circle cx='12' cy='44' r='6' fill='none' stroke='currentColor' stroke-width='4'/><circle cx='48' cy='28' r='6' fill='none' stroke='currentColor' stroke-width='4'/><line x1='17' y1='15' x2='43' y2='25' stroke='currentColor' stroke-width='3'/><line x1='17' y1='41' x2='43' y2='31' stroke='currentColor' stroke-width='3'/>",
+    "defaultTool": "openai",
+    "attributes": [
+      {
+        "key": "modality",
+        "label": "Modality",
+        "type": "enum",
+        "options": ["llm", "vision", "speech", "embedding", "classic-ml"]
+      },
+      {
+        "key": "serving",
+        "label": "Serving",
+        "type": "enum",
+        "options": ["api", "self-hosted", "edge"]
+      },
+      { "key": "gpu", "label": "GPU", "type": "boolean" },
+      { "key": "model", "label": "Model", "type": "text" },
+      {
+        "key": "context",
+        "label": "Context",
+        "type": "text",
+        "suggestions": ["8k", "128k", "200k", "1M"]
+      },
+      {
+        "key": "latency-slo",
+        "label": "Latency SLO",
+        "type": "text",
+        "suggestions": ["<100ms", "<500ms", "<2s", "<10s"]
+      }
+    ]
+  },
+  "warehouse": {
+    "label": "Analytics / Warehouse",
+    "brandColor": "#fca5a5",
+    "symbolViewBox": "0 0 56 48",
+    "symbolSvg": "<line x1='4' y1='44' x2='52' y2='44' stroke='currentColor' stroke-width='4'/><rect x='8' y='28' width='10' height='16' fill='none' stroke='currentColor' stroke-width='3'/><rect x='23' y='18' width='10' height='26' fill='none' stroke='currentColor' stroke-width='3'/><rect x='38' y='8' width='10' height='36' fill='none' stroke='currentColor' stroke-width='3'/>",
+    "defaultTool": "snowflake",
+    "attributes": [
+      {
+        "key": "storage-format",
+        "label": "Storage Format",
+        "type": "enum",
+        "options": ["columnar", "row", "lakehouse"]
+      },
+      {
+        "key": "refresh",
+        "label": "Refresh",
+        "type": "enum",
+        "options": ["batch", "streaming", "hybrid"]
+      },
+      {
+        "key": "size",
+        "label": "Size",
+        "type": "text",
+        "suggestions": ["GBs", "TBs", "PBs"]
+      },
+      { "key": "partitioned", "label": "Partitioned", "type": "boolean" }
+    ]
+  },
+  "pipeline": {
+    "label": "Data Pipeline",
+    "brandColor": "#67e8f9",
+    "symbolViewBox": "0 0 56 56",
+    "symbolSvg": "<path d='M6 8 h44 L40 28 L50 48 H6 L16 28 Z' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'/>",
+    "defaultTool": "spark",
+    "attributes": [
+      {
+        "key": "mode",
+        "label": "Mode",
+        "type": "enum",
+        "options": ["batch", "streaming", "micro-batch"]
+      },
+      {
+        "key": "orchestration",
+        "label": "Orchestration",
+        "type": "enum",
+        "options": ["scheduled", "event-driven", "manual"]
+      },
+      { "key": "parallelism", "label": "Parallelism", "type": "number" },
+      { "key": "checkpointing", "label": "Checkpointing", "type": "boolean" }
+    ]
+  },
+  "cicd": {
+    "label": "CI / CD",
+    "brandColor": "#bef264",
+    "symbolViewBox": "0 0 56 56",
+    "symbolSvg": "<path d='M28 10 a18 18 0 0 1 16 10' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/><path d='M44 20 l4 -8 -8 -2' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><path d='M28 46 a18 18 0 0 1 -16 -10' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/><path d='M12 36 l-4 8 8 2' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/>",
+    "defaultTool": "githubactions",
+    "attributes": [
+      {
+        "key": "trigger",
+        "label": "Trigger",
+        "type": "enum",
+        "options": ["push", "pr", "schedule", "manual"]
+      },
+      {
+        "key": "environments",
+        "label": "Environments",
+        "type": "text",
+        "suggestions": ["dev", "staging", "prod"]
+      },
+      { "key": "approval", "label": "Approval", "type": "boolean" },
+      { "key": "parallelism", "label": "Parallelism", "type": "number" }
+    ]
+  },
+  "iac": {
+    "label": "Infra as Code",
+    "brandColor": "#fdba74",
+    "symbolViewBox": "0 0 64 48",
+    "symbolSvg": "<rect x='4' y='4' width='56' height='40' fill='none' stroke='currentColor' stroke-width='4' rx='3'/><path d='M22 24 l-8 -6 8 -6' fill='none' stroke='currentColor' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/><path d='M42 24 l8 -6 -8 -6' fill='none' stroke='currentColor' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/><line x1='30' y1='30' x2='34' y2='18' stroke='currentColor' stroke-width='3' stroke-linecap='round'/>",
+    "defaultTool": "terraform",
+    "attributes": [
+      {
+        "key": "state",
+        "label": "State",
+        "type": "enum",
+        "options": ["remote", "local", "managed"]
+      },
+      {
+        "key": "drift-detection",
+        "label": "Drift Detection",
+        "type": "boolean"
+      },
+      { "key": "plan-preview", "label": "Plan Preview", "type": "boolean" },
+      { "key": "modules", "label": "Modules", "type": "number" }
+    ]
+  },
+  "serverless": {
+    "label": "Serverless",
+    "brandColor": "#f9a8d4",
+    "symbolViewBox": "0 0 48 56",
+    "symbolSvg": "<path d='M10 8 l10 20 -8 0 l10 20' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>",
+    "defaultTool": "cloudflareworkers",
+    "attributes": [
+      {
+        "key": "trigger",
+        "label": "Trigger",
+        "type": "enum",
+        "options": ["http", "queue", "schedule", "event"]
+      },
+      {
+        "key": "cold-start",
+        "label": "Cold Start",
+        "type": "text",
+        "suggestions": ["<100ms", "<1s", ">1s"]
+      },
+      {
+        "key": "memory",
+        "label": "Memory",
+        "type": "text",
+        "suggestions": ["128MB", "512MB", "1GB"]
+      },
+      { "key": "concurrency", "label": "Concurrency", "type": "number" },
+      {
+        "key": "timeout",
+        "label": "Timeout",
+        "type": "text",
+        "suggestions": ["3s", "30s", "5m", "15m"]
+      }
+    ]
+  },
+  "secrets": {
+    "label": "Secrets",
+    "brandColor": "#fde047",
+    "symbolViewBox": "0 0 64 32",
+    "symbolSvg": "<circle cx='16' cy='16' r='10' fill='none' stroke='currentColor' stroke-width='4'/><line x1='26' y1='16' x2='58' y2='16' stroke='currentColor' stroke-width='4'/><line x1='46' y1='16' x2='46' y2='24' stroke='currentColor' stroke-width='3.5'/><line x1='54' y1='16' x2='54' y2='22' stroke='currentColor' stroke-width='3.5'/>",
+    "defaultTool": "vault",
+    "attributes": [
+      {
+        "key": "rotation",
+        "label": "Rotation",
+        "type": "enum",
+        "options": ["none", "manual", "automatic"]
+      },
+      {
+        "key": "access",
+        "label": "Access",
+        "type": "enum",
+        "options": ["iam", "token", "mtls"]
+      },
+      { "key": "audit-log", "label": "Audit Log", "type": "boolean" },
+      { "key": "versioning", "label": "Versioning", "type": "boolean" }
+    ]
+  },
+  "external": {
+    "label": "External Service",
+    "brandColor": "#cbd5e1",
+    "symbolViewBox": "0 0 64 56",
+    "symbolSvg": "<rect x='4' y='8' width='40' height='40' fill='none' stroke='currentColor' stroke-width='4' rx='3'/><path d='M44 28 h16' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/><path d='M52 20 l8 8 -8 8' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>",
+    "defaultTool": "stripe",
+    "attributes": [
+      {
+        "key": "provider-sla",
+        "label": "SLA",
+        "type": "text",
+        "suggestions": ["99.9%", "99.95%", "99.99%"]
+      },
+      {
+        "key": "auth",
+        "label": "Auth",
+        "type": "enum",
+        "options": ["api-key", "oauth2", "hmac", "none"]
+      },
+      { "key": "rate-limit", "label": "Rate Limit", "type": "text" },
+      {
+        "key": "webhook-callbacks",
+        "label": "Webhook Callbacks",
+        "type": "boolean"
+      }
+    ]
+  },
+  "notification": {
+    "label": "Notifications",
+    "brandColor": "#f9a8d4",
+    "symbolViewBox": "0 0 56 64",
+    "symbolSvg": "<path d='M28 4 a16 16 0 0 1 16 16 v16 l6 8 H6 l6 -8 V20 a16 16 0 0 1 16 -16 z' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'/><path d='M22 52 a6 6 0 0 0 12 0' fill='none' stroke='currentColor' stroke-width='4'/>",
+    "defaultTool": "fcm",
+    "attributes": [
+      {
+        "key": "channel",
+        "label": "Channel",
+        "type": "enum",
+        "options": ["push", "email", "sms", "multi"]
+      },
+      { "key": "batching", "label": "Batching", "type": "boolean" },
+      {
+        "key": "priority",
+        "label": "Priority",
+        "type": "enum",
+        "options": ["high", "normal", "low"]
+      },
+      {
+        "key": "delivery-guarantee",
+        "label": "Delivery Guarantee",
+        "type": "enum",
+        "options": ["at-most-once", "at-least-once", "exactly-once"]
+      }
+    ]
+  },
+  "realtime": {
+    "label": "Realtime",
+    "brandColor": "#7dd3fc",
+    "symbolViewBox": "0 0 64 56",
+    "symbolSvg": "<circle cx='32' cy='36' r='4' fill='currentColor'/><path d='M20 48 a16 16 0 0 1 24 0' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/><path d='M12 56 a24 24 0 0 1 40 0' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/><path d='M28 24 a8 8 0 0 1 8 0' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/>",
+    "defaultTool": "pusher",
+    "attributes": [
+      {
+        "key": "transport",
+        "label": "Transport",
+        "type": "enum",
+        "options": ["websocket", "sse", "webrtc"]
+      },
+      {
+        "key": "fanout",
+        "label": "Fanout",
+        "type": "text",
+        "suggestions": ["1:1", "1:N", "broadcast"]
+      },
+      {
+        "key": "scale",
+        "label": "Scale",
+        "type": "text",
+        "suggestions": ["1k conns", "100k conns", "1M conns"]
+      },
+      { "key": "presence", "label": "Presence", "type": "boolean" }
+    ]
+  },
+  "workflow": {
+    "label": "Workflow / Scheduler",
+    "brandColor": "#fcd34d",
+    "symbolViewBox": "0 0 64 64",
+    "symbolSvg": "<circle cx='32' cy='32' r='26' fill='none' stroke='currentColor' stroke-width='4'/><path d='M32 16 v16 l10 6' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><path d='M52 10 a26 26 0 0 1 6 18' fill='none' stroke='currentColor' stroke-width='3.5' stroke-linecap='round'/><path d='M54 6 l4 8 -8 0' fill='currentColor'/>",
+    "defaultTool": "temporal",
+    "attributes": [
+      {
+        "key": "schedule",
+        "label": "Schedule",
+        "type": "text",
+        "suggestions": ["cron", "event-driven", "manual"]
+      },
+      { "key": "retries", "label": "Retries", "type": "number" },
+      { "key": "durable", "label": "Durable state", "type": "boolean" },
+      { "key": "timeout", "label": "Timeout", "type": "text" },
+      { "key": "idempotency", "label": "Idempotency", "type": "boolean" }
+    ]
+  }
+}

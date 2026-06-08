@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f1117;
+  --panel: #161922;
+  --card: #1a1d27;
+  --border: #2e3345;
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --accent: #3b82f6;
+  --canvas-dot: #2e3345;
+  --chip-accent: #7dd3fc;
+  --node-shadow: none;
+}
+
+:root[data-theme="light"] {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #3b82f6;
+  --canvas-dot: #cbd5e1;
+  --chip-accent: #0369a1;
+  --node-shadow: 0 1px 3px rgb(0 0 0 / 0.12);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  /*
+   * Prevent browser pull-to-refresh / rubber-band overscroll when dragging a
+   * node downward toward the delete bin. Without this, a downward touch gesture
+   * that escapes React Flow's pane region triggers native overscroll on iOS
+   * Safari and Chrome Android, yanking the entire page/canvas.
+   * Canvas pan and pinch-zoom are unaffected — those are handled by React
+   * Flow's d3-zoom via pointer events, not by the browser's scroll chain.
+   */
+  overscroll-behavior: none;
+}
+
+/* animated tidy transition (toggled by Canvas) */
+.layout-animating .react-flow__node {
+  transition: transform 300ms ease;
+}
+
+/* Touch: ≥44px effective connection-handle targets; visual dot grows slightly */
+@media (pointer: coarse) {
+  .react-flow__handle {
+    width: 14px;
+    height: 14px;
+  }
+  .react-flow__handle::after {
+    content: "";
+    position: absolute;
+    inset: -16px;
+  }
+
+  /*
+   * Node touch-drag fix. React Flow only sets `touch-action: none` on
+   * `.react-flow__pane`, not on `.react-flow__node`. Without it, a finger
+   * starting on a node has the browser's default `touch-action: auto`, so the
+   * browser claims the gesture for native scrolling before React Flow's
+   * d3-drag threshold fires — the touchmove then bubbles to the pane's d3-zoom
+   * and the canvas pans instead of the node moving. Setting `touch-action:
+   * none` hands all touch deltas to JS so d3-drag moves the node (the node's
+   * `nopan` class keeps the pane still). Device-only behaviour — not
+   * exercisable in jsdom.
+   */
+  .react-flow__node {
+    touch-action: none;
+  }
+}

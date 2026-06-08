@@ -1,0 +1,33 @@
+name: New tool request
+description: Request a tool for the catalog (or PR it yourself — see CONTRIBUTING.md)
+labels: [catalog, good first issue]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+      placeholder: ClickHouse
+    validations:
+      required: true
+  - type: dropdown
+    id: archetype
+    attributes:
+      label: Archetype
+      options: [database, queue, compute, cache, gateway, observability, storage, search, cdn, client, auth, "new archetype (describe below)"]
+    validations:
+      required: true
+  - type: input
+    id: slug
+    attributes:
+      label: simple-icons slug
+      description: Find it at https://simpleicons.org (leave empty if not listed)
+      placeholder: clickhouse
+  - type: input
+    id: color
+    attributes:
+      label: Brand color (hex)
+      placeholder: "#FFCC01"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes

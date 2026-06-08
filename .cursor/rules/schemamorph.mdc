@@ -1,0 +1,59 @@
+---
+description: SchemaMorph repo rules
+alwaysApply: true
+---
+
+# SchemaMorph — Cursor Rules
+
+Full detail is in `AGENTS.md` at the repo root. This file is the condensed quick-reference.
+
+## The Gate (must pass before every handoff)
+
+```bash
+npm run typecheck && npm run lint && npm run format:check && npm run validate:catalog && npm run test && npm run build
+```
+
+## TDD
+
+Write the failing test first. Implement. Confirm green. No exceptions.
+
+## Catalog Flow (adding a tool to `src/catalog/tools.json`)
+
+1. Add JSON entry with `archetype`, `label`, `iconSlug` or `svgPath`, `brandColor`.
+2. Every tool needs a visible mark: `iconSlug` → `svgPath` → family glyph.
+   Bare initials are never acceptable for new entries.
+3. If `iconSlug` changed: `npm run generate:icons` (regenerates `icons.generated.ts`).
+4. `npm run validate:catalog` — fix all errors before committing.
+
+## Key Conventions
+
+- **Formatting**: Prettier double quotes, 2-space indent. `npm run format` to fix.
+- **No new runtime deps** without PR-description justification.
+- **PR titles**: Conventional Commits — `feat|fix|docs|catalog|chore|refactor|test|ci|perf|style|build: summary`.
+
+## Hard Guardrails
+
+- `dangerouslySetInnerHTML` exists in exactly 2 places (`Palette.tsx:40`,
+  `SysNode.tsx:67`) for catalog `symbolSvg` only. Never add new call sites.
+  Never pass user-supplied strings to it.
+- `icons.generated.ts` is generated — **never hand-edit**; use `npm run generate:icons`.
+- `.schemamorph` format changes: bump `SYSDRAW_VERSION` in `src/lib/sysdraw-file.ts`
+  and add a migration note in `docs/file-format.md`.
+- `locked` is in the file format (`meta.locked`). Theme, sidebar widths, and
+  autosave draft are localStorage-only — never put them in `.schemamorph`.
+
+## Architecture Sketch
+
+```
+src/state/store.ts          ← Zustand single store; setAll = bulk load entry point
+src/catalog/{archetypes,tools,protocols}.json  ← data-driven; validate:catalog is the guard
+src/lib/sysdraw-file.ts     ← Zod parse/serialize; SYSDRAW_VERSION = "1.1.0"
+src/lib/icons.generated.ts  ← GENERATED; do not touch
+src/components/canvas/      ← SysNode / NoteNode / BoundaryNode / SysEdge
+src/components/sidebar/     ← Palette (drag source)
+src/components/toolbar/     ← Toolbar (all action buttons)
+src/components/config-panel/← ConfigPanel (node/edge editing overlay)
+scripts/                    ← validate-catalog.ts, generate-icons.ts
+```
+
+See `AGENTS.md` for full directory map, all script names, and extended guardrail detail.
