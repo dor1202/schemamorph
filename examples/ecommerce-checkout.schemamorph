@@ -1,0 +1,369 @@
+{
+  "version": "1.3.0",
+  "meta": {
+    "title": "E-Commerce Checkout",
+    "lastModified": "2026-06-12T12:00:00.000Z",
+    "viewMode": "minimalist",
+    "nodeStyle": "card"
+  },
+  "nodes": [
+    {
+      "id": "title",
+      "type": "noteNode",
+      "position": { "x": 300, "y": -70 },
+      "data": {
+        "text": "ShopStream — checkout & order fulfillment",
+        "size": "title"
+      }
+    },
+    {
+      "id": "note-peak",
+      "type": "noteNode",
+      "position": { "x": 900, "y": 20 },
+      "data": {
+        "text": "Black Friday peak\n50k orders / min",
+        "color": "#fef08a",
+        "size": "small"
+      }
+    },
+    {
+      "id": "web",
+      "type": "sysNode",
+      "position": { "x": 140, "y": 40 },
+      "data": {
+        "archetype": "client",
+        "concreteTool": "web-client",
+        "label": "Web Storefront"
+      }
+    },
+    {
+      "id": "mobile",
+      "type": "sysNode",
+      "position": { "x": 540, "y": 40 },
+      "data": {
+        "archetype": "client",
+        "concreteTool": "mobile-client",
+        "label": "Mobile App"
+      }
+    },
+    {
+      "id": "cdn",
+      "type": "sysNode",
+      "position": { "x": 340, "y": 150 },
+      "data": {
+        "archetype": "cdn",
+        "concreteTool": "cloudflare",
+        "label": "CDN + WAF"
+      }
+    },
+    {
+      "id": "gateway",
+      "type": "sysNode",
+      "position": { "x": 340, "y": 250 },
+      "data": {
+        "archetype": "gateway",
+        "concreteTool": "nginx",
+        "label": "API Gateway"
+      }
+    },
+    {
+      "id": "auth",
+      "type": "sysNode",
+      "position": { "x": 60, "y": 250 },
+      "data": {
+        "archetype": "auth",
+        "concreteTool": "auth0",
+        "label": "Auth0"
+      }
+    },
+    {
+      "id": "obs-prom",
+      "type": "sysNode",
+      "position": { "x": 900, "y": 150 },
+      "data": {
+        "archetype": "observability",
+        "concreteTool": "prometheus",
+        "label": "Prometheus"
+      }
+    },
+    {
+      "id": "obs-graf",
+      "type": "sysNode",
+      "position": { "x": 900, "y": 250 },
+      "data": {
+        "archetype": "observability",
+        "concreteTool": "grafana",
+        "label": "Grafana"
+      }
+    },
+    {
+      "id": "b-k8s",
+      "type": "boundaryNode",
+      "position": { "x": 40, "y": 340 },
+      "width": 740,
+      "height": 300,
+      "data": {
+        "label": "Kubernetes (EKS)",
+        "color": "#3b82f6"
+      }
+    },
+    {
+      "id": "svc-order",
+      "type": "sysNode",
+      "position": { "x": 120, "y": 420 },
+      "data": {
+        "archetype": "compute",
+        "concreteTool": "service",
+        "label": "Order Service"
+      }
+    },
+    {
+      "id": "svc-catalog",
+      "type": "sysNode",
+      "position": { "x": 320, "y": 420 },
+      "data": {
+        "archetype": "compute",
+        "concreteTool": "service",
+        "label": "Catalog Service"
+      }
+    },
+    {
+      "id": "svc-payment",
+      "type": "sysNode",
+      "position": { "x": 520, "y": 420 },
+      "data": {
+        "archetype": "compute",
+        "concreteTool": "service",
+        "label": "Payment Service"
+      }
+    },
+    {
+      "id": "worker-notify",
+      "type": "sysNode",
+      "position": { "x": 320, "y": 540 },
+      "data": {
+        "archetype": "compute",
+        "concreteTool": "worker",
+        "label": "Notification Worker"
+      }
+    },
+    {
+      "id": "stripe",
+      "type": "sysNode",
+      "position": { "x": 900, "y": 420 },
+      "data": {
+        "archetype": "external",
+        "concreteTool": "stripe",
+        "label": "Stripe"
+      }
+    },
+    {
+      "id": "kafka",
+      "type": "sysNode",
+      "position": { "x": 320, "y": 680 },
+      "data": {
+        "archetype": "queue",
+        "concreteTool": "kafka",
+        "label": "Order Events",
+        "customProperties": {
+          "partitions": "48",
+          "replication": "3",
+          "delivery": "at-least-once"
+        }
+      }
+    },
+    {
+      "id": "note-kafka",
+      "type": "noteNode",
+      "position": { "x": 560, "y": 660 },
+      "data": {
+        "text": "3 AZ · RF=3",
+        "color": "#dbeafe",
+        "size": "small"
+      }
+    },
+    {
+      "id": "b-data",
+      "type": "boundaryNode",
+      "position": { "x": 40, "y": 780 },
+      "width": 740,
+      "height": 200,
+      "data": {
+        "label": "Data Layer",
+        "color": "#10b981"
+      }
+    },
+    {
+      "id": "db-orders",
+      "type": "sysNode",
+      "position": { "x": 120, "y": 840 },
+      "data": {
+        "archetype": "database",
+        "concreteTool": "postgresql",
+        "label": "Orders DB",
+        "customProperties": {
+          "replication": "primary-replica",
+          "shards": "8",
+          "backups": "true"
+        }
+      }
+    },
+    {
+      "id": "cache",
+      "type": "sysNode",
+      "position": { "x": 320, "y": 840 },
+      "data": {
+        "archetype": "cache",
+        "concreteTool": "redis",
+        "label": "Session Cache"
+      }
+    },
+    {
+      "id": "search",
+      "type": "sysNode",
+      "position": { "x": 520, "y": 840 },
+      "data": {
+        "archetype": "search",
+        "concreteTool": "elasticsearch",
+        "label": "Product Search"
+      }
+    },
+    {
+      "id": "storage",
+      "type": "sysNode",
+      "position": { "x": 900, "y": 840 },
+      "data": {
+        "archetype": "storage",
+        "concreteTool": "s3",
+        "label": "Product Images"
+      }
+    },
+    {
+      "id": "twilio",
+      "type": "sysNode",
+      "position": { "x": 900, "y": 540 },
+      "data": {
+        "archetype": "external",
+        "concreteTool": "twilio",
+        "label": "SMS / Email"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-web-cdn",
+      "source": "web",
+      "target": "cdn",
+      "type": "sysEdge",
+      "data": { "protocol": "HTTPS", "label": "browse" }
+    },
+    {
+      "id": "e-mobile-cdn",
+      "source": "mobile",
+      "target": "cdn",
+      "type": "sysEdge",
+      "data": { "protocol": "HTTPS" }
+    },
+    {
+      "id": "e-cdn-gw",
+      "source": "cdn",
+      "target": "gateway",
+      "type": "sysEdge",
+      "data": { "protocol": "HTTPS" }
+    },
+    {
+      "id": "e-gw-auth",
+      "source": "gateway",
+      "target": "auth",
+      "type": "sysEdge",
+      "data": { "protocol": "REST", "label": "JWT verify" }
+    },
+    {
+      "id": "e-gw-order",
+      "source": "gateway",
+      "target": "svc-order",
+      "type": "sysEdge",
+      "data": { "protocol": "REST", "label": "checkout" }
+    },
+    {
+      "id": "e-gw-catalog",
+      "source": "gateway",
+      "target": "svc-catalog",
+      "type": "sysEdge",
+      "data": { "protocol": "REST", "label": "catalog" }
+    },
+    {
+      "id": "e-catalog-cache",
+      "source": "svc-catalog",
+      "target": "cache",
+      "type": "sysEdge",
+      "data": { "protocol": "TCP", "label": "cache-aside" }
+    },
+    {
+      "id": "e-catalog-search",
+      "source": "svc-catalog",
+      "target": "search",
+      "type": "sysEdge",
+      "data": { "protocol": "REST" }
+    },
+    {
+      "id": "e-order-db",
+      "source": "svc-order",
+      "target": "db-orders",
+      "type": "sysEdge",
+      "data": { "protocol": "TCP", "label": "write order" }
+    },
+    {
+      "id": "e-order-kafka",
+      "source": "svc-order",
+      "target": "kafka",
+      "type": "sysEdge",
+      "animated": true,
+      "data": { "protocol": "CDC Stream", "label": "order.created" }
+    },
+    {
+      "id": "e-payment-stripe",
+      "source": "svc-payment",
+      "target": "stripe",
+      "type": "sysEdge",
+      "data": { "protocol": "HTTPS", "label": "charge" }
+    },
+    {
+      "id": "e-order-payment",
+      "source": "svc-order",
+      "target": "svc-payment",
+      "type": "sysEdge",
+      "data": { "protocol": "gRPC", "label": "authorize" }
+    },
+    {
+      "id": "e-kafka-worker",
+      "source": "kafka",
+      "target": "worker-notify",
+      "type": "sysEdge",
+      "animated": true,
+      "data": { "protocol": "AMQP", "label": "consume" }
+    },
+    {
+      "id": "e-kafka-search",
+      "source": "kafka",
+      "target": "search",
+      "type": "sysEdge",
+      "animated": true,
+      "data": { "protocol": "ETL", "label": "index" }
+    },
+    {
+      "id": "e-worker-twilio",
+      "source": "worker-notify",
+      "target": "twilio",
+      "type": "sysEdge",
+      "data": { "protocol": "Webhook", "label": "receipt" }
+    },
+    {
+      "id": "e-catalog-storage",
+      "source": "svc-catalog",
+      "target": "storage",
+      "type": "sysEdge",
+      "data": { "protocol": "HTTPS", "label": "assets" }
+    }
+  ]
+}
