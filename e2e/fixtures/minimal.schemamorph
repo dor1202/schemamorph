@@ -1,0 +1,22 @@
+{
+  "version": "1.3.0",
+  "meta": {
+    "title": "e2e-fixture",
+    "viewMode": "minimalist",
+    "nodeStyle": "symbol",
+    "locked": false
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "sysNode",
+      "position": { "x": 120, "y": 120 },
+      "data": {
+        "archetype": "database",
+        "concreteTool": "mysql",
+        "label": "Users DB"
+      }
+    }
+  ],
+  "edges": []
+}

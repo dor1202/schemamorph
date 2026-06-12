@@ -26,6 +26,11 @@
 </p>
 
 <!-- screenshot: canvas dual-mode -->
+<img src="https://github.com/dor1202/schemamorph/blob/main/examples/ecomerce-real.png?raw=true"/>
+<img src="https://github.com/dor1202/schemamorph/blob/main/examples/ecomerce-minimal.png?raw=true"/>
+<img src="https://github.com/dor1202/schemamorph/blob/main/examples/rag-real.png?raw=true"/>
+<img src="https://github.com/dor1202/schemamorph/blob/main/examples/rag-minimal.png?raw=true"/>
+
 
 ---
 
