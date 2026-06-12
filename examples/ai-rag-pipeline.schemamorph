@@ -1,0 +1,366 @@
+{
+  "version": "1.3.0",
+  "meta": {
+    "title": "AI RAG Assistant",
+    "lastModified": "2026-06-12T12:00:00.000Z",
+    "viewMode": "real",
+    "nodeStyle": "card"
+  },
+  "nodes": [
+    {
+      "id": "title",
+      "type": "noteNode",
+      "position": { "x": 280, "y": -80 },
+      "data": {
+        "text": "DocMind — real-time RAG over 12M documents",
+        "size": "title"
+      }
+    },
+    {
+      "id": "note-sla",
+      "type": "noteNode",
+      "position": { "x": 920, "y": 10 },
+      "data": {
+        "text": "p99 latency target\n< 800 ms",
+        "color": "#fce7f3",
+        "size": "small"
+      }
+    },
+    {
+      "id": "web",
+      "type": "sysNode",
+      "position": { "x": 80, "y": 60 },
+      "data": {
+        "archetype": "client",
+        "concreteTool": "web-client",
+        "label": "Chat UI"
+      }
+    },
+    {
+      "id": "api",
+      "type": "sysNode",
+      "position": { "x": 320, "y": 60 },
+      "data": {
+        "archetype": "serverless",
+        "concreteTool": "vercel",
+        "label": "Edge API"
+      }
+    },
+    {
+      "id": "auth",
+      "type": "sysNode",
+      "position": { "x": 560, "y": 60 },
+      "data": {
+        "archetype": "auth",
+        "concreteTool": "clerk",
+        "label": "Clerk Auth"
+      }
+    },
+    {
+      "id": "step-1",
+      "type": "stepNode",
+      "position": { "x": 200, "y": 200 },
+      "data": { "label": "1", "color": "#8b5cf6" }
+    },
+    {
+      "id": "step-2",
+      "type": "stepNode",
+      "position": { "x": 480, "y": 200 },
+      "data": { "label": "2", "color": "#8b5cf6" }
+    },
+    {
+      "id": "step-3",
+      "type": "stepNode",
+      "position": { "x": 760, "y": 200 },
+      "data": { "label": "3", "color": "#8b5cf6" }
+    },
+    {
+      "id": "b-inference",
+      "type": "boundaryNode",
+      "position": { "x": 40, "y": 260 },
+      "width": 420,
+      "height": 240,
+      "data": {
+        "label": "Inference",
+        "color": "#a855f7"
+      }
+    },
+    {
+      "id": "embed",
+      "type": "sysNode",
+      "position": { "x": 120, "y": 340 },
+      "data": {
+        "archetype": "ml",
+        "concreteTool": "openai",
+        "label": "Embeddings"
+      }
+    },
+    {
+      "id": "llm",
+      "type": "sysNode",
+      "position": { "x": 280, "y": 340 },
+      "data": {
+        "archetype": "ml",
+        "concreteTool": "anthropic",
+        "label": "Claude Sonnet"
+      }
+    },
+    {
+      "id": "b-vector",
+      "type": "boundaryNode",
+      "position": { "x": 500, "y": 260 },
+      "width": 420,
+      "height": 240,
+      "data": {
+        "label": "Vector Store",
+        "color": "#06b6d4"
+      }
+    },
+    {
+      "id": "pinecone",
+      "type": "sysNode",
+      "position": { "x": 580, "y": 340 },
+      "data": {
+        "archetype": "search",
+        "concreteTool": "pinecone",
+        "label": "Pinecone"
+      }
+    },
+    {
+      "id": "pgvector",
+      "type": "sysNode",
+      "position": { "x": 740, "y": 340 },
+      "data": {
+        "archetype": "search",
+        "concreteTool": "pgvector",
+        "label": "pgvector fallback"
+      }
+    },
+    {
+      "id": "note-cache",
+      "type": "noteNode",
+      "position": { "x": 740, "y": 430 },
+      "data": {
+        "text": "hot queries\ncached 5 min",
+        "color": "#cffafe",
+        "size": "small"
+      }
+    },
+    {
+      "id": "redis",
+      "type": "sysNode",
+      "position": { "x": 920, "y": 340 },
+      "data": {
+        "archetype": "cache",
+        "concreteTool": "redis",
+        "label": "Semantic Cache"
+      }
+    },
+    {
+      "id": "arrow-bypass",
+      "type": "arrowNode",
+      "position": { "x": 880, "y": 280 },
+      "data": {
+        "dx": 60,
+        "dy": 80,
+        "color": "#06b6d4",
+        "lineStyle": "dashed"
+      }
+    },
+    {
+      "id": "kafka",
+      "type": "sysNode",
+      "position": { "x": 320, "y": 560 },
+      "data": {
+        "archetype": "queue",
+        "concreteTool": "kafka",
+        "label": "Ingestion Stream",
+        "customProperties": {
+          "partitions": "96",
+          "retention": "7d"
+        }
+      }
+    },
+    {
+      "id": "flink",
+      "type": "sysNode",
+      "position": { "x": 560, "y": 560 },
+      "data": {
+        "archetype": "pipeline",
+        "concreteTool": "flink",
+        "label": "Chunk + Embed"
+      }
+    },
+    {
+      "id": "b-analytics",
+      "type": "boundaryNode",
+      "position": { "x": 40, "y": 660 },
+      "width": 880,
+      "height": 200,
+      "data": {
+        "label": "Analytics & Observability",
+        "color": "#f97316"
+      }
+    },
+    {
+      "id": "clickhouse",
+      "type": "sysNode",
+      "position": { "x": 120, "y": 740 },
+      "data": {
+        "archetype": "warehouse",
+        "concreteTool": "clickhouse",
+        "label": "Query Logs"
+      }
+    },
+    {
+      "id": "s3",
+      "type": "sysNode",
+      "position": { "x": 320, "y": 740 },
+      "data": {
+        "archetype": "storage",
+        "concreteTool": "s3",
+        "label": "Raw Documents"
+      }
+    },
+    {
+      "id": "otel",
+      "type": "sysNode",
+      "position": { "x": 520, "y": 740 },
+      "data": {
+        "archetype": "observability",
+        "concreteTool": "opentelemetry",
+        "label": "OpenTelemetry"
+      }
+    },
+    {
+      "id": "grafana",
+      "type": "sysNode",
+      "position": { "x": 720, "y": 740 },
+      "data": {
+        "archetype": "observability",
+        "concreteTool": "grafana",
+        "label": "Dashboards"
+      }
+    },
+    {
+      "id": "note-ingest",
+      "type": "noteNode",
+      "position": { "x": 40, "y": 540 },
+      "data": {
+        "text": "CDC from\nConfluence + Notion",
+        "color": "#ffedd5",
+        "size": "small"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-web-api",
+      "source": "web",
+      "target": "api",
+      "type": "sysEdge",
+      "data": { "protocol": "WebSocket", "label": "stream" }
+    },
+    {
+      "id": "e-api-auth",
+      "source": "api",
+      "target": "auth",
+      "type": "sysEdge",
+      "data": { "protocol": "REST", "label": "session" }
+    },
+    {
+      "id": "e-api-embed",
+      "source": "api",
+      "target": "embed",
+      "type": "sysEdge",
+      "data": { "protocol": "HTTPS", "label": "embed query" }
+    },
+    {
+      "id": "e-embed-pinecone",
+      "source": "embed",
+      "target": "pinecone",
+      "type": "sysEdge",
+      "data": { "protocol": "REST", "label": "top-k retrieve" }
+    },
+    {
+      "id": "e-pinecone-llm",
+      "source": "pinecone",
+      "target": "llm",
+      "type": "sysEdge",
+      "data": { "protocol": "gRPC", "label": "context" }
+    },
+    {
+      "id": "e-llm-api",
+      "source": "llm",
+      "target": "api",
+      "type": "sysEdge",
+      "data": { "protocol": "SSE", "label": "token stream" }
+    },
+    {
+      "id": "e-api-redis",
+      "source": "api",
+      "target": "redis",
+      "type": "sysEdge",
+      "data": { "protocol": "TCP", "label": "cache check" }
+    },
+    {
+      "id": "e-pgvector-fallback",
+      "source": "pinecone",
+      "target": "pgvector",
+      "type": "sysEdge",
+      "data": { "protocol": "TCP", "label": "fallback" }
+    },
+    {
+      "id": "e-kafka-flink",
+      "source": "kafka",
+      "target": "flink",
+      "type": "sysEdge",
+      "animated": true,
+      "data": { "protocol": "CDC Stream", "label": "doc.updated" }
+    },
+    {
+      "id": "e-flink-embed",
+      "source": "flink",
+      "target": "embed",
+      "type": "sysEdge",
+      "animated": true,
+      "data": { "protocol": "Batch", "label": "re-index" }
+    },
+    {
+      "id": "e-flink-s3",
+      "source": "flink",
+      "target": "s3",
+      "type": "sysEdge",
+      "data": { "protocol": "HTTPS", "label": "archive" }
+    },
+    {
+      "id": "e-flink-pinecone",
+      "source": "flink",
+      "target": "pinecone",
+      "type": "sysEdge",
+      "animated": true,
+      "data": { "protocol": "ETL", "label": "upsert vectors" }
+    },
+    {
+      "id": "e-api-clickhouse",
+      "source": "api",
+      "target": "clickhouse",
+      "type": "sysEdge",
+      "data": { "protocol": "TCP", "label": "audit log" }
+    },
+    {
+      "id": "e-api-otel",
+      "source": "api",
+      "target": "otel",
+      "type": "sysEdge",
+      "data": { "protocol": "gRPC", "label": "traces" }
+    },
+    {
+      "id": "e-otel-grafana",
+      "source": "otel",
+      "target": "grafana",
+      "type": "sysEdge",
+      "data": { "protocol": "REST" }
+    }
+  ]
+}
